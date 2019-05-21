@@ -14,6 +14,7 @@ import java.util.Iterator;
 /**
  * Created by mananshah on 20/05/19.
  */
+@CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
 public class ItemController {
 

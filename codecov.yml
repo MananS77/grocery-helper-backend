@@ -4,3 +4,5 @@ coverage:
   range: "40...70"
 codecov:
   token: 03f75ee0-c5ac-498f-ad2f-942b211da3cc
+ignore:
+     - "/src/main/java/com/manan/groceryhelper/exception/"

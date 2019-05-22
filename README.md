@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/MananS77/grocery-helper-backend.svg?branch=master)](https://travis-ci.org/MananS77/grocery-helper-backend)   [![codecov](https://codecov.io/gh/MananS77/grocery-helper-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/MananS77/grocery-helper-backend)
 
+* [Introduction](#grocery-helper-backend-application "Goto Introduction")
+* [API Reference](#below-apis-are-supported- "Goto API Reference")
+* [Docker Build](#building-docker-image-and-running-it-on-container "Goto Docker Build/Pull Information")
+
 # Grocery Helper Backend Application
 
 The Grocery Helper application's backend is built on top of `Java 8`, by leveraging the `Spring Boot` framework.

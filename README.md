@@ -263,3 +263,19 @@ To pull the same, run the below command -
 ```
 docker pull manans77/grocery-helper
 ```
+
+## CI/CD Processes
+I have enabled a Github web-hook on this repository for a continuous build using `Travis CI`.
+Correspondingly, there's a `Jacoco` plugin in the `pom.xml` for test-coverage.
+
+
+The test-coverage statistics are automatically delivered to `codecov` for better visualization, at the end of a successful
+build cycle on `Travis CI`.
+
+I have added below snippet to the `.travis.yml` file for the same - 
+```
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+```
+
+Refer the `codecov.yml` and `.travis.yml` files for more details.

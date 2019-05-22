@@ -1,6 +1,11 @@
 language: java
 
-script: "mvn cobertura:cobertura"
+notifications:
+ email:
+  - manan.shah77@gmail.com
+
+script:
+ - mvn clean install -DskipTests=false cobertura:cobertura jxr:jxr surefire-report:report-only
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

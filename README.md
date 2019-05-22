@@ -124,6 +124,19 @@ Response -
 Grocery Item deleted successfully
 ```
 
+#### POST /grocery/item/{id}?newItemName=something ###
+Request -
+```
+curl -X POST \
+  'http://localhost:8080/grocery/item/17?newItemName=Doodh' \
+  -H 'Accept: */*' \
+  -H 'content-length: '
+```
+Response -
+```
+Grocery Item updated successfully
+```
+
 #### GET /grocery/category/items?categoryId={id} ####
 Request -
 ```

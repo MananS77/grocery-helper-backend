@@ -8,7 +8,7 @@ notifications:
   - manan.shah77@gmail.com
 
 script:
- - mvn clean install -DskipTests=false cobertura:cobertura jxr:jxr surefire-report:report-only
+ - mvn clean install -DskipTests=false cobertura:cobertura
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

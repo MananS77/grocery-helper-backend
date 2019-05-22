@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Created by mananshah on 21/05/19.
@@ -137,6 +138,33 @@ public class GroceryHelperItemAPITests {
 
         Iterable<Item> groceryItems = responseEntity.getBody();
         assertThat(groceryItems, hasItem(hasProperty("itemName", is("Milk"))));
+    }
+
+    @Test
+    public void test_I_Update_GroceryItemById() {
+        ResponseEntity<String> response = restTemplate.exchange("http://localhost:" + port + "/grocery/item/8?newItemName=Pome",
+                HttpMethod.POST, null, new ParameterizedTypeReference<String>() {
+                });
+        String responseString = response.getBody();
+        assertEquals(responseString, "Grocery item successfully updated");
+    }
+
+    @Test
+    public void test_J_Update_GroceryItemById() {
+        ResponseEntity<String> response = restTemplate.exchange("http://localhost:" + port + "/grocery/item/17?newItemName=Pome",
+                HttpMethod.POST, null, new ParameterizedTypeReference<String>() {
+                });
+        String responseString = response.getBody();
+        assertNotEquals(responseString, "Grocery item successfully updated");
+    }
+
+    @Test
+    public void test_K_Update_GroceryItemById() {
+        ResponseEntity<String> response = restTemplate.exchange("http://localhost:" + port + "/grocery/item/17?newItemName=Pome",
+                HttpMethod.POST, null, new ParameterizedTypeReference<String>() {
+                });
+        String responseString = response.getBody();
+        assertEquals(responseString, "Grocery item couldn't be updated");
     }
 
 }

@@ -63,4 +63,20 @@ public class ItemService {
         }
     }
 
+    public void updateGroceryItem(long id, String newItemName) {
+        Item groceryItem = getGroceryItem(id);
+
+        if (groceryItem != null && !groceryItem.getItemName().isEmpty()) {
+            groceryItem.setItemName(newItemName);
+            itemRepository.save(groceryItem);
+        } else {
+            try {
+                throw new ItemNotFoundException("No Grocery Item found to update");
+            } catch (ItemNotFoundException e) {
+                //TODO: Add logging
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

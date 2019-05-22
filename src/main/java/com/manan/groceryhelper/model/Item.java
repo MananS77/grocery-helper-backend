@@ -43,6 +43,10 @@ public class Item {
         return itemName;
     }
 
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
     public void setItemCategory(Category itemCategory) {
         this.itemCategory = itemCategory;
     }

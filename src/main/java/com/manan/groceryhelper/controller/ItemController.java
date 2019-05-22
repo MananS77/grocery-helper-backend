@@ -46,24 +46,20 @@ public class ItemController {
         return new ResponseEntity("Grocery Item couldn't be added. Check if item already exists", HttpStatus.EXPECTATION_FAILED);
     }
 
-    /*
+
     @PostMapping("/grocery/item/{id}")
-    public ResponseEntity<String> updateGroceryItem(@PathVariable long id , @RequestBody Item groceryItem) {
+    public ResponseEntity<String> updateGroceryItem(@PathVariable long id , @RequestParam String newItemName) {
         try {
-            Item groceryItemFromService = itemService.getGroceryItem(id);
-            groceryItemFromService.setItemName(groceryItem.getItemName());
-            //groceryItemFromService.setItemCategory(groceryItem.getItemCategory());
-            itemService.addGroceryItem(groceryItemFromService);
-            return new ResponseEntity<String>("Grocery item " + groceryItem.getItemName() + " successfully updated",
+            itemService.updateGroceryItem(id, newItemName);
+            return new ResponseEntity<>("Grocery item successfully updated",
                     HttpStatus.OK);
         } catch (Exception e) {
             //Todo: Add logging
             e.printStackTrace();
         }
-        return new ResponseEntity<String>("Grocery item " + groceryItem.getItemName() + " couldn't be updated",
+        return new ResponseEntity<>("Grocery item couldn't be updated",
                 HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    */
 
     @DeleteMapping("/grocery/item/{id}")
     public ResponseEntity<String> deleteGroceryItem(@PathVariable long id) {

@@ -3,6 +3,7 @@
 * [Introduction](#grocery-helper-backend-application "Goto Introduction")
 * [API Reference](#below-apis-are-supported- "Goto API Reference")
 * [Docker Build](#building-docker-image-and-running-it-on-container "Goto Docker Build/Pull Information")
+* [CI/CD Process](#cicd-processes "Goto CI/CD Process Information")
 
 # Grocery Helper Backend Application
 

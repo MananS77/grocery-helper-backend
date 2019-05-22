@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/MananS77/grocery-helper-backend.svg?branch=master)](https://travis-ci.org/MananS77/grocery-helper-backend)
-
-[![codecov](https://codecov.io/gh/MananS77/grocery-helper-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/MananS77/grocery-helper-backend)
-
-Class Coverage: 90%
+[![Build Status](https://travis-ci.org/MananS77/grocery-helper-backend.svg?branch=master)](https://travis-ci.org/MananS77/grocery-helper-backend)   [![codecov](https://codecov.io/gh/MananS77/grocery-helper-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/MananS77/grocery-helper-backend)
 
 # Grocery Helper Backend Application
 
